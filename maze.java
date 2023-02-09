@@ -12,7 +12,7 @@ public class maze {
         }
         map[3][1]=1;
         map[3][2]=1;
-        map[5][3]=1;
+        map[2][2]=1;
 
         //显示地图
         for(int i=0;i<map.length;i++){
@@ -45,28 +45,28 @@ class M{
             if(map[i][j]==0){
                 //先假定能走通
                 map[i][j]=2;
-//                if(findway(map,i+1,j))
-//                    return true;
-//                else if(findway(map,i,j+1))
-//                    return true;
-//                else if(findway(map,i-1,j))
-//                    return true;
-//                else if(findway(map,i,j-1))
-//                    return true;
-                if(findway(map,i,j+1))
+                if(findway(map,i+1,j))
+                    return true;
+                else if(findway(map,i,j+1))
+                    return true;
+                else if(findway(map,i-1,j))
+                    return true;
+                else if(findway(map,i,j-1))
+                   return true;
+                /*if(findway(map,i,j+1))
                     return true;
                 else if(findway(map,i+1,j))
                     return true;
                 else if(findway(map,i,j-1))
                     return true;
                 else if(findway(map,i-1,j))
-                    return true;
+                    return true;*/
                 else {
                     map[i][j]=3;
                     return false;
                 }
             }
-            else{//map[i][j]=1,2,3   2的情况是又回到之前走过的地方认为false
+            else{//map[i][j]=1,2,3  2的情况是又回到之前走过的地方认为false
                 return false;
             }
         }
