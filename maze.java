@@ -66,7 +66,7 @@ class M{
                     return false;
                 }
             }
-            else{//map[i][j]=1,2,3
+            else{//map[i][j]=1,2,3   2的情况是又回到之前走过的地方认为false
                 return false;
             }
         }
